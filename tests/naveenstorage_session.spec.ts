@@ -21,11 +21,11 @@ test('store login sesssion-User-1', async ({page}) => {
     await  page.waitForURL('https://naveenautomationlabs.com/opencart/index.php?route=account/account');
 
     //to store the session
-    //await page.context().storageState({path:'auth/User-1.json'});
+    await page.context().storageState({path:'auth/User-1.json'});
 
 });
 
-test('store login sesssion-User-3', async ({page}) => {
+test('store login sesssion-User-2', async ({page}) => {
 
     await page.goto("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
     await page.locator("#input-email").fill('seleniumtest1@play.com');
@@ -34,7 +34,7 @@ test('store login sesssion-User-3', async ({page}) => {
     await page.waitForURL('https://naveenautomationlabs.com/opencart/index.php?route=account/account');
 
     //to store the session
-   // await page.context().storageState({path:'auth/User-2.json'});
-
+    await page.context().storageState({path:'auth/User-2.json'});
+   
 });
 

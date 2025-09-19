@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
 
-// test.use({storageState:'auth/Admin.json'});
+test.use({storageState:'auth/Admin.json'});
+test.use({storageState:'auth/User-1.json'});
+test.use({storageState:'auth/User-2.json'});
 
 test('navigate to cart-page without login', async ({page}) => {
 
