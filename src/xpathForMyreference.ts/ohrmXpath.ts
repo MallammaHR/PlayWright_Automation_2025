@@ -1,7 +1,8 @@
 import {chromium,Browser, Page} from'@playwright/test';
  
 
-///This is not the complete program and i wrote all the X-Path here and what all the best way i write xpath
+///This is not the complete program and i wrote all the X-Path here and what all the best way i can write xpath
+//this is not complete code and i wrote it for my refernce 
 //IIFE
 (async () => {
 
