@@ -17,6 +17,7 @@ import {chromium,Browser, Page} from'@playwright/test';
 
 
      //Multiple links at specific area[Header or footer or at login section or at list group]
+     //list of  groups
     //xpath://a[@class='list-group-item'] or css:a.list-group-item
     let allInnerlinks:string[]=await page.locator(`a.list-group-item`).allInnerTexts();
     console.log(allInnerlinks.length);//13
