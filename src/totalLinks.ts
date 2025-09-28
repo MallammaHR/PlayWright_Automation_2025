@@ -22,7 +22,7 @@ import {chromium,Browser,Locator, Page} from'@playwright/test';
      
     //img on the page where alt
      //total links on the page where href
-     let totalimg: string[] = await page.locator(`img[alt]`).allInnerTexts();//css=img[//@alt]
+     let totalimg: string[] = await page.locator(`img[alt]`).allInnerTexts();//xpath=img[//@alt]
      console.log(totalimg.length);
 
 
