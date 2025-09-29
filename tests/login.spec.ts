@@ -25,3 +25,8 @@ test('locator test', async ({ page }) => {
   await page.locator('//input[@id="input-password"]').fill("test@123");
   await page.locator('//input[@name="search" and @type="text"]').fill('macbook');
 });
+
+
+//https://www.espncricinfo.com/series/men-s-t20-asia-cup-2025-1496919/india-vs-pakistan-final-1496938/full-scorecard
+//https://naveenautomationlabs.com/opencart/ui/webtable.html-table
+//https://naveenautomationlabs.com/opencart/ui/selectdropdowns.html-dropdowns
