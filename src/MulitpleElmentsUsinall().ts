@@ -28,8 +28,10 @@ import {chromium,Browser,Locator, Page} from'@playwright/test';
     for(let e  of allfooterLocator)
     {
         //let allLocstring : string = await e.innerText()
-        console.log(await e.innerText());
-        console.log(await e.getAttribute('href'))
+        //console.log(await e.innerText());
+        // console.log("*******************************************************************************")
+        //console.log(await e.getAttribute('href'))
+        console.log(await e.inputValue());
         
     }
 
