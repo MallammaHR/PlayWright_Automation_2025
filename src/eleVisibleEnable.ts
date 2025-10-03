@@ -1,8 +1,10 @@
 import { Browser, chromium, Locator, Page } from '@playwright/test';
 
 // IIFE - Immediately Invoked Function Expression
-(async () => {
-  let browser: Browser = await chromium.launch({
+(async () =>
+   {
+  let browser: Browser = await chromium.launch(
+    {
     headless: false,
     channel : 'chrome',
     
@@ -44,4 +46,5 @@ import { Browser, chromium, Locator, Page } from '@playwright/test';
 // console.log(isDisabled);//false
 
 await page.close();
+
 })();

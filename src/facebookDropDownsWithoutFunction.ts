@@ -48,4 +48,6 @@ import {chromium,Browser,Locator, Page} from'@playwright/test';
 
 
     await page.close();
+
+
 })();
