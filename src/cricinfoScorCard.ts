@@ -60,38 +60,25 @@ import { chromium } from '@playwright/test';
 
   await page.goto('https://www.espncricinfo.com/series/men-s-t20-asia-cup-2025-1496919/india-vs-pakistan-final-1496938/full-scorecard');
 
-  //here create blank
-  const scores: number[] = [];
+  const allScores : string[] = await page.locator(`//span[text()='India']/ancestor::div[contains(@class,'fill-translucent-hover')]/following-sibling::div/table[contains(@class,'ci-scorecard-table')]//tr/td[3]`).allInnerTexts();
 
-  const scorecardTables = await page.locator(`xpath=//table[contains(@class,'ci-scorecard-table')]`).all();
+    const allscoresValue: number[] = [];
 
-  for (let table of scorecardTables) 
-    {
-    const headers = await table.locator('thead tr th').allTextContents();
-    const runsIndex = headers.findIndex(h => h.trim() === 'R');
-    const rows = await table.locator(`xpath=.//tbody/tr[td//a]`).all();
-    for (const row of rows) {
-      const cells = row.locator('td');
-      const cellCount = await cells.count();
-
-      if (runsIndex < cellCount) {
-        const runText = await cells.nth(runsIndex).textContent();
-        const run = parseInt(runText?.trim() || '');
-        if (!isNaN(run)) {
-          scores.push(run);
-        }
-      }
-    }
+  for(let i = 0; i<allScores.length-2; i++ )
+  {
+    allscoresValue.push(parseInt(allScores[i]));
   }
+  console.log(allscoresValue);
 
-  console.log('Extracted Runs:', scores);
+  //asceding order
+  allscoresValue.sort((a,b) => a-b);  
+  console.log(allscoresValue);
+  //decsedning order
+  allscoresValue.sort((a,b) => b-a);
+  console.log(allscoresValue);
 
-  // ascending
-  const ascending = [...scores].sort((a, b) => a - b);
-  console.log('Runs sorted ascending:', ascending);
-
-  // descending
-  const descending = [...scores].sort((a, b) => b - a);
-  console.log('Runs sorted descending:', descending);
+  //highest value
+ console.log('highest score : '+ allscoresValue[allscoresValue.length - 1]);
+ console.log('lowest score : '+allscoresValue[0]);
 
 })();
