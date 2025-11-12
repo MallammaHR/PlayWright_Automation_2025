@@ -49,6 +49,6 @@ import { Browser,chromium,Page,Locator } from "@playwright/test";
     console.log('The prompt PopUp Message is  : '+promptPopUpMsg);
 
     
-    
+    page.off('dialog', async dialog =>{});
 
 })();

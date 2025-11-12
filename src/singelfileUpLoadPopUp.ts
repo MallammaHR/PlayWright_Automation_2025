@@ -17,4 +17,5 @@ let page :Page;
     await page.getByTestId('file-input').setInputFiles('C:/Users/Mallukinnis/OneDrive/Documents/mallu.xlsx');//In selenium we senKeys() to  pass the fileLoctaion
     //inspect the upload button and then click ok
     await page.locator('#fileSubmit').click();
+    
 })();

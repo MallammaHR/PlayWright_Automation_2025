@@ -32,7 +32,7 @@ let page :Page;
 
     page=await context.newPage();
     page.goto(`https://the-internet.herokuapp.com/basic_auth`);
-    page
+   
 
 
 })();
