@@ -10,7 +10,7 @@ import { Browser, chromium, Locator, Page } from '@playwright/test';
 
   let page: Page = await browser.newPage();
 
-  await page.goto('https://naveenautomationlabs.com/opencart/index.php?route=account/login');
+  await page.goto('https://naveenautomationlabs.com/opencart/index.php?route=account/login')  ;
 
 
   //for button or input  ,if visible text or value is availble (for eg:Login,Conitnue)
