@@ -71,5 +71,6 @@ let page :Page;
     //main page 
     console.log("Ttitle of the Main Page  is : "+await page.title());
     console.log("URL of the Main Page  is : " + page.url());
+    await page.close();
    
 })();
